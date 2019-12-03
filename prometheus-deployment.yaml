@@ -23,7 +23,7 @@ spec:
               mountPath: /etc/prometheus/
             - name: prometheus-storage-volume
               mountPath: /prometheus/
-      nodeName: k8slinuxnode3
+      nodeName: k8slinuxnode1
       volumes:
         - name: prometheus-config-volume
           configMap:

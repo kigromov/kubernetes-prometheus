@@ -5,13 +5,14 @@ metadata:
   namespace: monitoring
   annotations:
       prometheus.io/scrape: 'true'
-      prometheus.io/port:   '9090'
-  
+      prometheus.io/port:   '9090'  
 spec:
   externalIPs:
   - 172.28.4.4
   selector: 
     app: prometheus-server 
   ports:
-    - port: 9090
-      targetPort: 9090
+   - name: http
+     protocol: TCP
+     port: 9090
+     targetPort: 9090

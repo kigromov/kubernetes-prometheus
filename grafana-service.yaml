@@ -7,10 +7,10 @@ metadata:
       prometheus.io/scrape: 'true'
       prometheus.io/port:   '3000'
 spec:
-  selector: 
-    app: grafana
   externalIPs:
   - 172.28.4.4
+  selector: 
+    app: grafana
   selector:   
   ports:
     - port: 3000
